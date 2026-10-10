@@ -1,0 +1,30 @@
+# Threat Hunting Labs
+
+Notas de los labs de threat hunting que voy resolviendo, sobre todo en [CyberDefenders](https://cyberdefenders.org/). Soy analista de CTI y uso este repositorio como cuaderno de aprendizaje y portfolio.
+
+Cada lab tiene su propia carpeta con una nota en Markdown y sus capturas. Todas las notas siguen la misma estructura:
+
+1. **Contexto:** el escenario en una frase.
+2. **Preguntas del lab:** qué busco, la consulta que uso, el resultado y por qué esa es la respuesta.
+3. **Cierre:** cadena del ataque, TTPs de MITRE ATT&CK, IOCs y una idea de detección.
+
+Solo publico labs que la plataforma ya ha retirado.
+
+## Labs
+
+| Lab | Plataforma | Técnicas ATT&CK | Herramientas | Nota |
+| --- | --- | --- | --- | --- |
+| T1110-003: password spraying por RDP | CyberDefenders | T1110.003, T1078, T1021.001 | Splunk | [Ver nota](T1110-003/T1110-003%20Lab.md) |
+
+## Estructura del repositorio
+
+```
+README.md
+plantillas/
+  Plantilla - Lab.md     plantilla que uso para cada lab nuevo
+T1110-003/
+  T1110-003 Lab.md       nota del lab
+  img/                   capturas de la nota
+```
+
+Las notas están escritas en [Obsidian](https://obsidian.md/), así que la cabecera de cada una (entre `---`) son propiedades de Obsidian: plataforma, herramientas, tácticas, técnicas y estado.

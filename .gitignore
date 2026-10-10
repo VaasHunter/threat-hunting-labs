@@ -1,0 +1,21 @@
+# Labs todavía activos en la plataforma: no se publican
+_pendientes/
+
+# Adjuntos sueltos de Obsidian que no pertenecen a ningún lab publicado
+Adjuntos/
+
+# Obsidian
+.obsidian/
+.trash/
+
+# macOS
+.DS_Store
+._*
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Otros
+.claude/
+*.tmp
