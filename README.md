@@ -4,7 +4,7 @@ Notas de los labs de threat hunting que voy resolviendo, sobre todo en [CyberDef
 
 Cada lab tiene su propia carpeta con una nota en Markdown y sus capturas. Todas las notas siguen la misma estructura:
 
-1. **Contexto:** el escenario en una frase.
+1. **Contexto:** el escenario.
 2. **Preguntas del lab:** qué busco, la consulta que uso, el resultado y por qué esa es la respuesta.
 3. **Cierre:** cadena del ataque, TTPs de MITRE ATT&CK, IOCs y una idea de detección.
 
