@@ -15,6 +15,7 @@ Solo publico labs que la plataforma ya ha retirado.
 | Lab | Plataforma | Técnicas ATT&CK | Herramientas | Nota |
 | --- | --- | --- | --- | --- |
 | T1110-003: password spraying por RDP | CyberDefenders | T1110.003, T1078, T1021.001 | Splunk | [Ver nota](T1110-003/T1110-003%20Lab.md) |
+| REvil - GOLD SOUTHFIELD: ransomware REvil | CyberDefenders | T1486, T1490, T1059.001, T1027.010 | Splunk, Sysmon, CyberChef, ANY.RUN, VirusTotal | [Ver nota](REvil%20-%20GOLD%20SOUTHFIELD%20Lab/REvil%20-%20GOLD%20SOUTHFIELD%20Lab.md) |
 
 ## Estructura del repositorio
 
@@ -25,6 +26,9 @@ plantillas/
 T1110-003/
   T1110-003 Lab.md       nota del lab
   img/                   capturas de la nota
+REvil - GOLD SOUTHFIELD Lab/
+  REvil - GOLD SOUTHFIELD Lab.md
+  img/
 ```
 
 Las notas están escritas en [Obsidian](https://obsidian.md/), así que la cabecera de cada una (entre `---`) son propiedades de Obsidian: plataforma, herramientas, tácticas, técnicas y estado.
