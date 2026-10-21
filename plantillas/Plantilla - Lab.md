@@ -21,7 +21,7 @@ tags:
 
 ## 1. Contexto
 
-**Escenario en una frase:**
+**Escenario:**
 
 ## 2. Preguntas del lab
 

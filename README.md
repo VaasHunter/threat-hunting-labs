@@ -16,6 +16,7 @@ Solo publico labs que la plataforma ya ha retirado.
 | --- | --- | --- | --- | --- |
 | T1110-003: password spraying por RDP | CyberDefenders | T1110.003, T1078, T1021.001 | Splunk | [Ver nota](T1110-003/T1110-003%20Lab.md) |
 | REvil - GOLD SOUTHFIELD: ransomware REvil | CyberDefenders | T1486, T1490, T1059.001, T1027.010 | Splunk, Sysmon, CyberChef, ANY.RUN, VirusTotal | [Ver nota](REvil%20-%20GOLD%20SOUTHFIELD%20Lab/REvil%20-%20GOLD%20SOUTHFIELD%20Lab.md) |
+| NerisBot: descargas maliciosas desde un servidor C2 | CyberDefenders | T1105, T1036.008 | Splunk, Suricata, Zeek, VirusTotal | [Ver nota](NerisBot%20Lab/NerisBot%20Lab.md) |
 
 ## Estructura del repositorio
 
@@ -28,6 +29,9 @@ T1110-003/
   img/                   capturas de la nota
 REvil - GOLD SOUTHFIELD Lab/
   REvil - GOLD SOUTHFIELD Lab.md
+  img/
+NerisBot Lab/
+  NerisBot Lab.md
   img/
 ```
 

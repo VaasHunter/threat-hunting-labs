@@ -177,9 +177,9 @@ index=revil winlog.event_id=1 winlog.event_data.Image="*assistant.exe"
 
 - **Qué busco:** el dominio `.onion` (red Tor) donde el atacante recibe los pagos de las víctimas. Aparece en la nota de rescate.
 - **Consulta o comando:** sin consulta. En Splunk no está: Sysmon registra que se crea la nota, pero no su contenido. Se busca con CTI a partir del SHA256 de P5:
-  ANY.RUN, informe público de la muestra (`app.any.run/tasks/bd94d2d4-dc07-406b-bfcf-b083b80a32ea`) → botón IOC → apartado Domains.
-- **Resultado:** ![](img/p6-dominio-onion.png)
-- **Por qué esa es la respuesta:** ANY.RUN extrae los dominios de la configuración y la memoria de la muestra, aunque nunca llegue a conectarse a ellos. En los IOCs de esta ejecución aparece una única dirección `.onion`, que es la web de pago que REvil pone en su nota de rescate.
+  ANY.RUN, informe público de la muestra https://app.any.run/tasks/bdc66b59-1cd9-4963-b7d5-99c62b36205a/ → pestaña Files → nota de rescate (`56m380o-readme.txt`) → HEX → vista Text.
+- **Resultado:** ![](img/p6-nota-rescate-anyrun.png)
+- **Por qué esa es la respuesta:** en la pestaña Files de ANY.RUN está la nota de rescate que soltó la muestra al ejecutarse. Al verla como texto aparece la dirección de la web de pago en Tor, `aplebzu47wgazapdqks6vrcv6zcnjppkbxbr6wketf56nf6aq2nmyoyd.onion`, que es el dominio del atacante. En esta ejecución la nota se llama `56m380o-readme.txt` y no `5uizv5660t-readme.txt` como en el lab, porque REvil genera un nombre aleatorio en cada ejecución. La nota también da una web secundaria, `decryptor.cc`, para abrirla sin Tor.
 - **Técnica ATT&CK:** ninguna
 
 ## 3. Cierre
@@ -211,6 +211,7 @@ index=revil winlog.event_id=1 winlog.event_data.Image="*assistant.exe"
 | Ruta | C:\Users\Administrator\Downloads\facebook assistant.exe | Ubicación del ejecutable en el equipo afectado |
 | Archivo | 5uizv5660t-readme.txt | Nota de rescate |
 | Dominio | aplebzu47wgazapdqks6vrcv6zcnjppkbxbr6wketf56nf6aq2nmyoyd.onion | Web de pago de REvil en Tor |
+| Dominio | decryptor.cc | Web de pago secundaria (sin Tor), según la nota de rescate en ANY.RUN |
 
 ### Una idea de detección
 
