@@ -276,10 +276,3 @@ Todas las horas son del 2011-08-10 y salen de los eventos `fileinfo` de Suricata
 | SHA1 | 2a6d5ad9a782c96f9cd214fcd105056248e6df31 | `kx4.txt` |
 | MD5 | 564048b35da9d447f2e861d5896d908d | `kx4.txt` |
 | IP | 60.190.223.75, 94.63.149.152 | También envían ejecutables (`kp.exe`, `ff.exe`) a la víctima. Sospecha, sin confirmar |
-
-### Una idea de detección
-
-- **Qué detectaría:** un ejecutable de Windows descargado con una extensión que no es de ejecutable (`.txt`, `.jpg`, etc.).
-- **Fuente de datos:** Zeek `files.log` y `http.log` (o `fileinfo` de Suricata si tiene activado el campo `magic`).
-- **Lógica:** alertar cuando `mime_type` es `application/x-dosexec` y la URI o el nombre del fichero en la petición HTTP no termina en `.exe`, `.dll` ni `.msi`. Sube la prioridad si el servidor no es un repositorio de software conocido o si el mismo equipo descarga varios ejecutables del mismo dominio en poco tiempo.
-- **Falso positivo probable:** actualizadores de software legítimo que sirven binarios con extensiones genéricas o sin extensión.

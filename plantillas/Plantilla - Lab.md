@@ -146,12 +146,3 @@ Orden cronológico, una línea por paso, con hora.
 | Tipo | Valor | Contexto |
 | --- | --- | --- |
 | | | |
-
-### Una idea de detección
-
-Una sola. En palabras o en Sigma, lo que salga antes.
-
-- **Qué detectaría:**
-- **Fuente de datos:**
-- **Lógica:**
-- **Falso positivo probable:**

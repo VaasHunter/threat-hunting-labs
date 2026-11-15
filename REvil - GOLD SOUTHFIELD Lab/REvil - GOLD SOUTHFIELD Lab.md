@@ -212,10 +212,3 @@ index=revil winlog.event_id=1 winlog.event_data.Image="*assistant.exe"
 | Archivo | 5uizv5660t-readme.txt | Nota de rescate |
 | Dominio | aplebzu47wgazapdqks6vrcv6zcnjppkbxbr6wketf56nf6aq2nmyoyd.onion | Web de pago de REvil en Tor |
 | Dominio | decryptor.cc | Web de pago secundaria (sin Tor), según la nota de rescate en ANY.RUN |
-
-### Una idea de detección
-
-- **Qué detectaría:** PowerShell lanzado con un comando codificado por un ejecutable que se ejecuta desde la carpeta de Descargas de un usuario.
-- **Fuente de datos:** Sysmon, evento 1 (creación de proceso).
-- **Lógica:** alertar cuando `Image` termina en `powershell.exe`, `CommandLine` contiene `-e`, `-enc` o `-EncodedCommand`, y `ParentImage` está en `C:\Users\*\Downloads\`. Sube la prioridad si en los minutos siguientes ese mismo proceso padre crea el mismo nombre de archivo en muchas carpetas (evento 11).
-- **Falso positivo probable:** instaladores o herramientas de soporte descargados por el usuario que usan PowerShell codificado para configurarse.
